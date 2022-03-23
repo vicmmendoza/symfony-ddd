@@ -13,6 +13,8 @@ class DevicesPutController
         $name = $request->get('name');
         $mac_address = $request->get('mac_address');
         
+        // TODO faltaria el aplication service para guardar los datos
+
         return new Response('', Response::HTTP_CREATED);
         
     }
