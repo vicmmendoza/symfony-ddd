@@ -1,4 +1,4 @@
-leads:
+devices:
   path: /devices
-  controller: Vic\Controller\Devices\DevicesPutController
+  controller: App\Controller\Devices\DevicesPutController
   methods: PUT
