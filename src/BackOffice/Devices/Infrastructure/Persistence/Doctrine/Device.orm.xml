@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Vic\BackOffice\Devices\Domain\Device" table="devices">
+        <id name="id"  class="Vic\BackOffice\Devices\Domain\ValueObject\DeviceId" column="id" length="36" />
+        <embedded name="name" class="Vic\BackOffice\Devices\Domain\ValueObject\DeviceName" use-column-prefix="false" />
+        <embedded name="mac_address" class="Vic\BackOffice\Devices\ValueObject\Domain\DeviceMacAddress" use-column-prefix="false" />
+    </entity>
+
+</doctrine-mapping>
