@@ -2,6 +2,10 @@
 
 namespace Vic\BackOffice\Devices\Domain;
 
+use Vic\BackOffice\Devices\Domain\ValueObject\DeviceId;
+use Vic\BackOffice\Devices\Domain\ValueObject\DeviceName;
+use Vic\BackOffice\Devices\Domain\ValueObject\DeviceMacAddress;
+
 final class Device
 {
 
