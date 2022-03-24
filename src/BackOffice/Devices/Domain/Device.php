@@ -5,8 +5,9 @@ namespace Vic\BackOffice\Devices\Domain;
 use Vic\BackOffice\Devices\Domain\ValueObject\DeviceId;
 use Vic\BackOffice\Devices\Domain\ValueObject\DeviceName;
 use Vic\BackOffice\Devices\Domain\ValueObject\DeviceMacAddress;
+use Vic\Shared\Domain\Aggregate\AggregateRoot;
 
-final class Device
+final class Device extends AggregateRoot
 {
 
     private $id;
