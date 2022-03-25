@@ -14,6 +14,7 @@ abstract class DoctrineRepository
 
     public function __construct(EntityManager $entityManager)
     {
+        $this->entityManager = $entityManager;
     }
 
     protected function entityManager(): EntityManager
