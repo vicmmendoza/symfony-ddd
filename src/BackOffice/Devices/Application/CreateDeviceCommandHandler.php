@@ -17,6 +17,7 @@ final class CreateDeviceCommandHandler
 
     public function __construct(DeviceCreator $creator)
     {
+        $this->creator = $creator;
     }
 
     public function __invoke(CreateDeviceCommand $command): void
@@ -25,6 +26,6 @@ final class CreateDeviceCommandHandler
         $name           = new DeviceName($command->name());
         $mac_address    = new DeviceMacAddress($command->mac_address());
 
-        //$this->creator->__invoke($id, $name, $mac_address);
+        $this->creator->__invoke($id, $name, $mac_address);
     }
 }

@@ -18,6 +18,7 @@ final class DeviceCreator
 
     public function __construct(DeviceRepository $repository)
     {
+        $this->repository = $repository;
     }
 
     public function __invoke(DeviceId $id, DeviceName $name, DeviceMacAddress $mac_address): void

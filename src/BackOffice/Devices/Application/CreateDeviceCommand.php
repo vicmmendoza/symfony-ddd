@@ -9,8 +9,11 @@ final class CreateDeviceCommand
     private string $name;
     private string $mac_address;
 
-    public function __construct(string $id, string $name, string $duration)
+    public function __construct(string $id, string $name, string $mac_address)
     {
+        $this->id = $id;
+        $this->name = $name;
+        $this->mac_address = $mac_address;
     }
 
     public function id(): string
