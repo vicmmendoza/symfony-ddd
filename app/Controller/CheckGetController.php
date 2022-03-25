@@ -11,7 +11,7 @@ class CheckGetController
     public function __invoke(Request $request): Response
     {
     
-        return new Response('', Response::HTTP_CREATED);
+        return new Response('Check', Response::HTTP_OK);
         
     }
 }
