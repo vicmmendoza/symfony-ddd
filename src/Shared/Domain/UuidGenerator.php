@@ -1,6 +1,6 @@
 <?php 
 
-namespace Vic\BackOffice\Shared\Domain;
+namespace Vic\Shared\Domain;
 
 interface UuidGenerator
 {
