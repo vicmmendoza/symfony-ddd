@@ -1,8 +1,18 @@
 default:
     suites:
-        default:
+        devices:
+            paths:
+                - ./tests/Features/Devices/
             contexts:
-                - App\Tests\Behat\DemoContext
+                - App\Tests\Behat\ApplicationContext
 
     extensions:
-        FriendsOfBehat\SymfonyExtension: null
+        FriendsOfBehat\SymfonyExtension:
+          kernel:
+            class: App\Kernel
+          bootstrap: ./tests/bootstrap.php
+        Behat\MinkExtension:
+          sessions:
+            symfony:
+              symfony: ~
+          base_url: ''
