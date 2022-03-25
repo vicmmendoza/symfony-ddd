@@ -8,3 +8,5 @@ He tenido problemas con los test no me han funcionado ni los unitarios y tampoco
 
 El punto de entrada es un endpoint(PUT) que recibe un uuid como parametro y el nombre y mac address.
 /devices/uuid
+
+He tenido problemas para guardar los datos en la base de datos, ya que al no conocer muy bien no he dado con un error que tengo ahora mismo.
