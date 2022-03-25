@@ -8,19 +8,20 @@ use Vic\BackOffice\Devices\Application\DeviceCreator;
 use Vic\BackOffice\Devices\Application\CreateDeviceCommand;
 use Vic\BackOffice\Devices\Application\CreateDeviceCommandHandler;
 use Vic\BackOffice\Devices\Infrastructure\Persistence\DoctrineDeviceRepository;
-
 class DevicesPutController
 {
+
+    private CreateDeviceCommandHandler $command;
+
+    public function __construct(CreateDeviceCommandHandler $command)
+    {
+        $this->command = $command;
+    }
 
     public function __invoke(string $id, Request $request): Response
     {
 
-        // TODO Este código no es correcto ya que debería ejecutarse de otra manera
-        $device_creator = new DeviceCreator(new DoctrineDeviceRepository);
-
-        $create_device_command_handler = new CreateDeviceCommandHandler($device_creator);
-
-        $create_device_command_handler->__invoke(new CreateDeviceCommand(
+        $this->command->__invoke(new CreateDeviceCommand(
                                             $id,
                                             $request->get('name'),
                                             $request->get('mac_address'),
