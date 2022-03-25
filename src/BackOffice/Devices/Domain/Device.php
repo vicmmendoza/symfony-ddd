@@ -16,7 +16,9 @@ final class Device extends AggregateRoot
 
     public function __construct(DeviceId $id, DeviceName $name, DeviceMacAddress $mac_address)
     {
-        
+        $this->id = $id;
+        $this->name = $name;
+        $this->mac_address = $mac_address;
     }
 
     public static function create(DeviceId $id, DeviceName $name, DeviceMacAddress $mac_address)

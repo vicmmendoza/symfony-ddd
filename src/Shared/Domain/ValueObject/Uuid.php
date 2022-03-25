@@ -8,8 +8,13 @@ use Stringable;
 
 class Uuid implements Stringable
 {
+
+    protected $value;
+
     public function __construct(string $value)
     {
+        $this->value = $value;
+
         $this->ensureIsValidUuid($value);
     }
 
