@@ -5,19 +5,17 @@ declare(strict_types=1);
 namespace Vic\Shared\Infrastructure\Persistence\Doctrine;
 
 use Vic\Shared\Domain\Aggregate\AggregateRoot;
-use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\EntityRepository;
-
+use Doctrine\ORM\EntityManagerInterface;
 abstract class DoctrineRepository
 {
     private $entityManager;
 
-    public function __construct(EntityManager $entityManager)
+    public function __construct(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
     }
 
-    protected function entityManager(): EntityManager
+    protected function entityManager(): EntityManagerInterface
     {
         return $this->entityManager;
     }
