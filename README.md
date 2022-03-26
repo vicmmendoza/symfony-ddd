@@ -10,4 +10,5 @@ Inputs
     name
     mac_address
 
-Falta realizar test.
+Para ejecutar los test
+    vendor/bin/phpunit
