@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class DevicePutControllerTest extends WebTestCase
 {
-    public function testShowPost()
+    public function testPutDevices()
     {
         $client = static::createClient();
 
