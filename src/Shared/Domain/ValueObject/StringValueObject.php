@@ -9,6 +9,7 @@ abstract class StringValueObject
 
     public function __construct(string $value)
     {
+        $this->value = $value;
     }
 
     public function value(): string
