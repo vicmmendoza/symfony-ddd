@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vic\BackOffice\Devices\Application;
+namespace Vic\BackOffice\Devices\Application\Create;
 
 use Vic\BackOffice\Devices\Domain\Device;
 use Vic\BackOffice\Devices\Domain\DeviceRepository;

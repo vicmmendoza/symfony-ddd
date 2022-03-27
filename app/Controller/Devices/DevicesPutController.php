@@ -4,9 +4,8 @@ namespace App\Controller\Devices;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Vic\BackOffice\Devices\Application\DeviceCreator;
-use Vic\BackOffice\Devices\Application\CreateDeviceCommand;
-use Vic\BackOffice\Devices\Application\CreateDeviceCommandHandler;
+use Vic\BackOffice\Devices\Application\Create\CreateDeviceCommand;
+use Vic\BackOffice\Devices\Application\Create\CreateDeviceCommandHandler;
 class DevicesPutController
 {
 

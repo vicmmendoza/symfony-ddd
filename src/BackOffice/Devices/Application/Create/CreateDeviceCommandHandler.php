@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace Vic\BackOffice\Devices\Application\Create;
 
-namespace Vic\BackOffice\Devices\Application;
-
-use Vic\BackOffice\Devices\Application\DeviceCreator;
+use Vic\BackOffice\Devices\Application\Create\DeviceCreator;
 use Vic\BackOffice\Devices\Domain\ValueObject\DeviceId;
 use Vic\BackOffice\Devices\Domain\ValueObject\DeviceName;
 use Vic\BackOffice\Devices\Domain\ValueObject\DeviceMacAddress;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Vic\BackOffice\Devices\Application;
+namespace Vic\BackOffice\Devices\Application\Create;
 
 final class CreateDeviceCommand
 {
