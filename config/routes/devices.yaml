@@ -1,4 +1,4 @@
 devices:
-  path: /devices/{id}
+  path: api/devices/{id}
   controller: App\Controller\Devices\DevicesPutController
   methods: PUT
