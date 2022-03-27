@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Features;
+namespace App\Tests\Features\Devices;
 
 use Faker\Factory;
 use Symfony\Component\HttpFoundation\Response;

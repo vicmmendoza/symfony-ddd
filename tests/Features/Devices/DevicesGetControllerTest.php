@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Features;
+namespace App\Tests\Features\Devices;
 
 use Vic\BackOffice\Devices\Domain\Device;
 use Symfony\Component\HttpFoundation\Response;
