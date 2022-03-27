@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Hautelook\AliceBundle\PhpUnit\ReloadDatabaseTrait;
 
-class DevicePutControllerTest extends WebTestCase
+class DevicesPutControllerTest extends WebTestCase
 {
 
     use ReloadDatabaseTrait;
