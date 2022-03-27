@@ -1,0 +1,4 @@
+check:
+  path: /uuid
+  controller: App\Controller\UuidGetController
+  methods: GET
