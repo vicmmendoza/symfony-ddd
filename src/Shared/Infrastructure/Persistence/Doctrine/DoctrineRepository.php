@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Vic\Shared\Infrastructure\Persistence\Doctrine;
 
-use Vic\Shared\Domain\Aggregate\AggregateRoot;
+use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Vic\Shared\Domain\Aggregate\AggregateRoot;
+
 abstract class DoctrineRepository
 {
     private $entityManager;
