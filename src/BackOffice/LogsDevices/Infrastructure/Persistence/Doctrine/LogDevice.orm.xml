@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Vic\BackOffice\LogsDevices\Domain\LogDevice" table="logs_devices">
+        <id name="id" type="integer" class="Vic\BackOffice\LogsDevices\Domain\ValueObject\LogDeviceId" column="id">
+            <generator strategy="AUTO"/>
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1" />
+        </id>
+        <embedded name="uuid_device" class="Vic\BackOffice\LogsDevices\Domain\ValueObject\LogDeviceUuidDevice" use-column-prefix="false" />
+        <embedded name="description" class="Vic\BackOffice\LogsDevices\Domain\ValueObject\LogDeviceDescription" use-column-prefix="false" />
+        <embedded name="type" class="Vic\BackOffice\LogsDevices\Domain\ValueObject\LogDeviceType" use-column-prefix="false" />
+        <embedded name="created_at" class="Vic\BackOffice\LogsDevices\Domain\ValueObject\LogDeviceCreatedAt" use-column-prefix="false" />
+    </entity>
+
+</doctrine-mapping>

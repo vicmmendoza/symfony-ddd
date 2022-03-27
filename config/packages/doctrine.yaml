@@ -19,4 +19,9 @@ doctrine:
                 dir: '%kernel.project_dir%/src/BackOffice/Devices/Infrastructure/Persistence/Doctrine'
                 prefix: 'Vic\BackOffice\Devices\Domain'
                 alias: Vic\BackOffice\Devices\Domain
-            
+            LogDevice:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/src/BackOffice/LogsDevices/Infrastructure/Persistence/Doctrine'
+                prefix: 'Vic\BackOffice\LogsDevices\Domain'
+                alias: Vic\BackOffice\LogsDevices\Domain
