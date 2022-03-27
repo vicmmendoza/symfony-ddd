@@ -2,6 +2,7 @@
 
 namespace App\Tests\Features;
 
+use Faker\Factory;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
@@ -14,9 +15,12 @@ class DevicesPutControllerTest extends WebTestCase
 
     public function testSuccess()
     {
+
+        $faker = Factory::create();
+
         $client = static::createClient();
 
-        $this->sendRequest($client, '90dc55b0-abc0-11ec-b909-0242ac120002', $this->getJson() );
+        $this->sendRequest($client, $faker->uuid, $this->getJson() );
 
         $this->assertEquals(Response::HTTP_CREATED, $client->getResponse()->getStatusCode());
     }
@@ -29,7 +33,9 @@ class DevicesPutControllerTest extends WebTestCase
     public function testNameEmpty()
     {
 
-        $this->executeTestBadRequest($this->getJson('', '2B-45-B8-65-0B-7F'));
+        $faker = Factory::create();
+
+        $this->executeTestBadRequest($this->getJson('', $faker->macAddress));
 
     }
 
@@ -42,9 +48,11 @@ class DevicesPutControllerTest extends WebTestCase
 
     private function executeTestBadRequest(array $json)
     {
+        $faker = Factory::create();
+
         $client = static::createClient();
 
-        $this->sendRequest($client, '90dc55b0-abc0-11ec-b909-0242ac120002',  $json);
+        $this->sendRequest($client,  $faker->uuid,  $json);
 
         $this->assertEquals(Response::HTTP_BAD_REQUEST, $client->getResponse()->getStatusCode());
     }
