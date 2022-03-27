@@ -23,27 +23,28 @@ class DevicePutControllerTest extends WebTestCase
 
     public function testDataEmpty()
     {
-        $client = static::createClient();
-
-        $this->sendRequest($client, '90dc55b0-abc0-11ec-b909-0242ac120002', [] );
-
-        $this->assertEquals(Response::HTTP_BAD_REQUEST, $client->getResponse()->getStatusCode());
+        $this->executeTestBadRequest([]);
     }
 
     public function testNameEmpty()
     {
-        $client = static::createClient();
 
-        $this->sendRequest($client, '90dc55b0-abc0-11ec-b909-0242ac120002', $this->getJson('', '2B-45-B8-65-0B-7F') );
+        $this->executeTestBadRequest($this->getJson('', '2B-45-B8-65-0B-7F'));
 
-        $this->assertEquals(Response::HTTP_BAD_REQUEST, $client->getResponse()->getStatusCode());
     }
 
     public function testMacAddressEmpty()
     {
+
+        $this->executeTestBadRequest($this->getJson('La maquina', ''));
+
+    }
+
+    private function executeTestBadRequest(array $json)
+    {
         $client = static::createClient();
 
-        $this->sendRequest($client, '90dc55b0-abc0-11ec-b909-0242ac120002', $this->getJson('La maquina', '') );
+        $this->sendRequest($client, '90dc55b0-abc0-11ec-b909-0242ac120002',  $json);
 
         $this->assertEquals(Response::HTTP_BAD_REQUEST, $client->getResponse()->getStatusCode());
     }
