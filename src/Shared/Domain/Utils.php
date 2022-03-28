@@ -38,7 +38,7 @@ final class Utils
 
     public static function stringToDate(string $date): Carbon
     {
-        return Carbon::createFromFormat(DateTimeInterface::ATOM, $date);
+        return Carbon::createFromFormat('Y-m-d H:i:s', $date);
     }
 
 }
