@@ -2,8 +2,8 @@
 
 namespace Vic\BackOffice\LogsDevices\Domain;
 
-use Vic\BackOffice\LogsDevices\Domain\ValueObject\LogDeviceCreatedAt;
 use Vic\Shared\Domain\Aggregate\AggregateRoot;
+use Vic\BackOffice\LogsDevices\Domain\ValueObject\LogDeviceCreatedAt;
 use Vic\BackOffice\LogsDevices\Domain\ValueObject\LogDeviceId;
 use Vic\BackOffice\LogsDevices\Domain\ValueObject\LogDeviceType;
 use Vic\BackOffice\LogsDevices\Domain\ValueObject\LogDeviceUuidDevice;
@@ -19,14 +19,12 @@ final class LogDevice extends AggregateRoot
     protected $created_at;
 
     public function __construct(
-                LogDeviceId $id,
                 LogDeviceUuidDevice $uuid_device,
                 LogDeviceDescription $description,
                 LogDeviceType $type,
                 LogDeviceCreatedAt $created_at
     )
     {
-        $this->id = $id;
         $this->uuid_device = $uuid_device;
         $this->description = $description;
         $this->type = $type;
@@ -34,7 +32,6 @@ final class LogDevice extends AggregateRoot
     }
 
     public static function create(
-                LogDeviceId $id,
                 LogDeviceUuidDevice $uuid_device,
                 LogDeviceDescription $description,
                 LogDeviceType $type,
@@ -42,7 +39,7 @@ final class LogDevice extends AggregateRoot
     )
     {
         
-        $log_device = new self($id, $uuid_device, $description, $type, $created_at);
+        $log_device = new self($uuid_device, $description, $type, $created_at);
 
         return $log_device;
 

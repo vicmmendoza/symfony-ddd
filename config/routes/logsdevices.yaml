@@ -1,0 +1,4 @@
+logsdevices_post:
+  path: api/logsdevices
+  controller: App\Controller\LogsDevices\LogsDevicesPostController
+  methods: POST
